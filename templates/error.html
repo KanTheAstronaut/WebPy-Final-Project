@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{gettext("Error")}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>{{error}}</h1>
+        <a class="header-link" href="/">
+            {{gettext("Go back home")}}
+        </a>
+    </header>
+</body>
+
+</html>

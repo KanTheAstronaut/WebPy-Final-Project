@@ -1,0 +1,117 @@
+﻿body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.join-advertise {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.join-advertise > a {
+  font-size: 18px;
+  padding: 32px;
+}
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+table,
+table td,
+table tr {
+  border: 2px solid black;
+  padding: 5px;
+}
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  top: 0;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+header .header-link {
+  cursor: pointer;
+  margin-right: 20px;
+}
+.hidden {
+  display: none;
+}
+.subtext {
+  opacity: 0.75;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 0;
+  padding: 10px;
+}
+.board > .board-row > .board-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+}
+.board > .board-row > .board-col.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.board > .board-row > .board-col:hover {
+  background-color: #ddd;
+}
+.shifted {
+  margin-left: 10px;
+}
+.error {
+  color: red;
+}
+.product-holder {
+  padding-top: 60px;
+  padding: 20px;
+}
+.product-holder .product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block;
+}
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  margin-left: -30px;
+}
+.text-center {
+  text-align: center;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form > fieldset {
+  display: inline-grid;
+}
+form > fieldset > input {
+  margin-bottom: 10px;
+}
+form > fieldset > input[type=submit] {
+  margin-top: 10px;
+}

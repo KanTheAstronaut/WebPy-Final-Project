@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    <title>{{gettext("Waiting for a driver")}}...</title>
+</head>
+
+<body>
+    <h3>{{gettext("WAITING FOR A DRIVER TO AGREE TO OFFER YOU THE RIDE")}}</h3>
+    <script>
+        window.socket = io.connect('http://' + location.hostname + ':' + location.port + '/rideExchange');
+        window.socket.on('connect', function() {
+            window.socket.on('refresh', function() {
+                location.reload();
+            });
+        });
+
+        window.socket.emit('join', {{data|tojson|safe}});
+
+        window.socket.on('gotride', function(data) {
+            location.href = '/ride/' + data['rideId']
+        });
+    </script>
+</body>
+
+</html>

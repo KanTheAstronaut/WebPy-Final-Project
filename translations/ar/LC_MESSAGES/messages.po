@@ -1,0 +1,250 @@
+# Arabic translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-12-23 14:44+0200\n"
+"PO-Revision-Date: 2023-12-23 14:44+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: main.py:272
+msgid "Address"
+msgstr "عنوان"
+
+#: main.py:273
+msgid "Now or Later"
+msgstr "الآن أو لاحقًا"
+
+#: main.py:273
+msgid "Now"
+msgstr "الآن"
+
+#: main.py:273
+msgid "Later"
+msgstr "لاحقاً"
+
+#: main.py:274 templates/driver.html:17
+msgid "Time"
+msgstr "وقت"
+
+#: main.py:275
+msgid "Vehicle Type"
+msgstr "نوع السيارة"
+
+#: main.py:278
+msgid "Request Ride"
+msgstr "طلب ركوب"
+
+#: main.py:296
+msgid "Page not found"
+msgstr "الصفحة غير موجودة"
+
+#: main.py:301
+msgid "An internal error occurred"
+msgstr "حدث خطأ داخلي"
+
+#: auth/__init__.py:167 auth/__init__.py:173 profiles/templates/profile.html:15
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: auth/__init__.py:168 auth/__init__.py:174
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: auth/__init__.py:169 auth/templates/login.html:7
+#: auth/templates/login.html:15
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: auth/__init__.py:172 profiles/templates/profile.html:16
+msgid "Email"
+msgstr "بريد إلكتروني"
+
+#: auth/__init__.py:175
+msgid "Profile Image"
+msgstr "صورة الملف الشخصي"
+
+#: auth/__init__.py:175
+msgid "Images only!"
+msgstr "الصور فقط!"
+
+#: auth/__init__.py:176
+msgid "Type"
+msgstr "يكتب"
+
+#: auth/__init__.py:177
+msgid "Register"
+msgstr "يسجل"
+
+#: auth/__init__.py:180
+msgid "Car Type"
+msgstr "نوع السيارة"
+
+#: auth/__init__.py:181 profiles/templates/profile.html:19
+msgid "Car Make"
+msgstr "صنع السيارة"
+
+#: auth/__init__.py:182 profiles/templates/profile.html:20
+msgid "Car Model"
+msgstr "طراز السيارة"
+
+#: auth/__init__.py:183 profiles/templates/profile.html:21
+msgid "Car Year"
+msgstr "سنة السيارة"
+
+#: auth/__init__.py:184 profiles/templates/profile.html:22
+msgid "Car Color"
+msgstr "لون السيارة"
+
+#: auth/__init__.py:185 profiles/templates/profile.html:23
+msgid "Car License Plate"
+msgstr "لوحة ترخيص السيارة"
+
+#: auth/__init__.py:186
+msgid "Submit"
+msgstr "يُقدِّم"
+
+#: auth/__init__.py:213
+msgid "Invalid username or password"
+msgstr "خطأ في اسم المستخدم أو كلمة مرور"
+
+#: auth/__init__.py:256
+msgid "Username is not available!"
+msgstr "إسم المستخدم غير متوفر!"
+
+#: auth/templates/driverInformation.html:7
+msgid "Register Vehicle"
+msgstr "تسجيل المركبة"
+
+#: auth/templates/driverInformation.html:15
+msgid "Register Your Vehicle"
+msgstr "سجل سيارتك"
+
+#: auth/templates/login.html:15 auth/templates/signup.html:15
+#: profiles/templates/profile.html:11
+msgid "Home"
+msgstr "بيت"
+
+#: auth/templates/login.html:28
+msgid "Don't have an account?"
+msgstr "ليس لديك حساب؟"
+
+#: auth/templates/signup.html:7 auth/templates/signup.html:15
+msgid "Signup"
+msgstr "اشتراك"
+
+#: auth/templates/signup.html:28
+msgid "Already have an account?"
+msgstr "هل لديك حساب؟"
+
+#: profiles/templates/editProfile.html:14
+msgid "Edit Your Vehicle"
+msgstr "تحرير سيارتك"
+
+#: profiles/templates/profile.html:12
+msgid "profile"
+msgstr "حساب تعريفي"
+
+#: profiles/templates/profile.html:25
+msgid "Edit vehicle information"
+msgstr "تعديل معلومات السيارة"
+
+#: templates/chat.html:9
+msgid "Ride chat"
+msgstr "ركوب الدردشة"
+
+#: templates/chat.html:13
+msgid "Back to ride details"
+msgstr "العودة إلى تفاصيل الرحلة"
+
+#: templates/chat.html:22
+msgid "Send"
+msgstr "يرسل"
+
+#: templates/driver.html:7
+msgid "Select a ride"
+msgstr "اختر رحلة"
+
+#: templates/driver.html:12
+msgid "Available rides"
+msgstr "الرحلات المتاحة"
+
+#: templates/driver.html:16
+msgid "To"
+msgstr "ل"
+
+#: templates/driver.html:18
+msgid "Select ride"
+msgstr "اختر الرحلة"
+
+#: templates/error.html:7
+msgid "Error"
+msgstr "خطأ"
+
+#: templates/error.html:15
+msgid "Go back home"
+msgstr "ارجع الى البيت"
+
+#: templates/invoice.html:7
+msgid "Invoice"
+msgstr "فاتورة"
+
+#: templates/invoice.html:11
+msgid "Ride invoice"
+msgstr "فاتورة ركوب"
+
+#: templates/invoice.html:12 templates/ride.html:13
+msgid "Driver"
+msgstr "سائق"
+
+#: templates/invoice.html:13 templates/ride.html:14
+msgid "Rider"
+msgstr "رايدر"
+
+#: templates/invoice.html:14
+msgid "Ride cost"
+msgstr "تكلفة الركوب"
+
+#: templates/ride.html:8
+msgid "Your ride"
+msgstr "رحلتك"
+
+#: templates/ride.html:12
+msgid "Ride details"
+msgstr "تفاصيل الرحلة"
+
+#: templates/ride.html:15
+msgid "Destination"
+msgstr "وجهة"
+
+#: templates/ride.html:16
+msgid "Chat"
+msgstr "محادثة"
+
+#: templates/ride.html:17
+msgid "Arrived"
+msgstr "وصل"
+
+#: templates/rider.html:7 templates/rider.html:14
+msgid "Request a ride"
+msgstr "اطلب توصيلة"
+
+#: templates/waiting.html:8
+msgid "Waiting for a driver"
+msgstr "في انتظار السائق"
+
+#: templates/waiting.html:12
+msgid "WAITING FOR A DRIVER TO AGREE TO OFFER YOU THE RIDE"
+msgstr "في انتظار موافقة السائق على عرض الرحلة عليك"

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{gettext("Signup")}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <main>
+        <form method="post">
+            <fieldset>
+                <h2>{{gettext("Signup")}} - <a href="/">{{gettext('Home')}}</a></h2>
+                {{ form.hidden_tag() }} {% if request.args.get('next') %}
+                <input type="hidden" name="next" value="{{request.args.get('next')}}" /> {% endif %} {{ form.email.label() }} {{ form.email() }} {{ form.username.label() }} {{ form.username() }} {{ form.password.label() }} {{ form.password() }} {{ form.accountType.label()
+                }} {{ form.accountType() }} {% with messages = get_flashed_messages(with_categories=true) %} {% if messages or form.errors %}
+                <ul>
+                    {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %} {% for message in form.errors %}
+                    <li class="error">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% endwith %} {{ form.submit() }}
+                <div class="text-center">
+                    <a href="{{ url_for('auth.login', next=request.args.get('next')) }}">{{gettext("Already have an account?")}}</a>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

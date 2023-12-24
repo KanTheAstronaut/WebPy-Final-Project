@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{gettext("Request a ride")}}</title>
+</head>
+
+<body>
+    <main>
+        <form method="post">
+            <fieldset>
+                {% with messages = get_flashed_messages(with_categories=true) %} {% if messages or form.errors %}
+                <ul>
+                    {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %} {% for message in form.errors %}
+                    <li class="error">{{ form.errors }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% endwith %}
+                <h3>{{gettext("Request a ride")}}</h3>
+                {{form.hidden_tag()}} {{form.address.label()}} {{form.address()}}
+                <div>
+                    {{form.nowOrLater.label()}} {{form.nowOrLater()}} {% if form.time is not none %} {{form.time.label()}} {{form.time()}} {% endif %}
+                </div>
+                {{form.vehicleType.label()}} {{form.vehicleType()}} {{form.submit}}
+            </fieldset>
+        </form>
+    </main>
+    <script>
+        function getUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        // Get latitude and longitude
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+
+                        // Display values in the specified spans
+                        document.getElementById('lat').value = latitude;
+                        document.getElementById('long').value = longitude;
+                    },
+                    function(error) {
+                        alert('Sorry, an error occurred. Please try again later! Error code: ' + error.code)
+                        location.href('/')
+                    }
+                );
+            } else {
+                alert('Sorry, your browser does not support geolocation services. Please try again later')
+                location.href('/')
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            getUserLocation()
+        });
+    </script>
+</body>
+
+</html>

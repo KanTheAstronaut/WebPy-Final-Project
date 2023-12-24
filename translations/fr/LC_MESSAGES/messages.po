@@ -1,0 +1,249 @@
+# French translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-12-23 14:44+0200\n"
+"PO-Revision-Date: 2023-12-23 14:44+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: main.py:272
+msgid "Address"
+msgstr "Adresse"
+
+#: main.py:273
+msgid "Now or Later"
+msgstr "Maintenant ou plus tard"
+
+#: main.py:273
+msgid "Now"
+msgstr "Maintenant"
+
+#: main.py:273
+msgid "Later"
+msgstr "Plus tard"
+
+#: main.py:274 templates/driver.html:17
+msgid "Time"
+msgstr "Temps"
+
+#: main.py:275
+msgid "Vehicle Type"
+msgstr "Type de véhicule"
+
+#: main.py:278
+msgid "Request Ride"
+msgstr "Demander un trajet"
+
+#: main.py:296
+msgid "Page not found"
+msgstr "Page non trouvée"
+
+#: main.py:301
+msgid "An internal error occurred"
+msgstr "Une erreur interne a eu lieu"
+
+#: auth/__init__.py:167 auth/__init__.py:173 profiles/templates/profile.html:15
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: auth/__init__.py:168 auth/__init__.py:174
+msgid "Password"
+msgstr "Mot de passe"
+
+#: auth/__init__.py:169 auth/templates/login.html:7
+#: auth/templates/login.html:15
+msgid "Login"
+msgstr "Se connecter"
+
+#: auth/__init__.py:172 profiles/templates/profile.html:16
+msgid "Email"
+msgstr "E-mail"
+
+#: auth/__init__.py:175
+msgid "Profile Image"
+msgstr "Image de profil"
+
+#: auth/__init__.py:175
+msgid "Images only!"
+msgstr "Images uniquement !"
+
+#: auth/__init__.py:176
+msgid "Type"
+msgstr "Type"
+
+#: auth/__init__.py:177
+msgid "Register"
+msgstr "Registre"
+
+#: auth/__init__.py:180
+msgid "Car Type"
+msgstr "Type de voiture"
+
+#: auth/__init__.py:181 profiles/templates/profile.html:19
+msgid "Car Make"
+msgstr "Marque de voiture"
+
+#: auth/__init__.py:182 profiles/templates/profile.html:20
+msgid "Car Model"
+msgstr "Modèle de voiture"
+
+#: auth/__init__.py:183 profiles/templates/profile.html:21
+msgid "Car Year"
+msgstr "Année de la voiture"
+
+#: auth/__init__.py:184 profiles/templates/profile.html:22
+msgid "Car Color"
+msgstr "Couleur de la voiture"
+
+#: auth/__init__.py:185 profiles/templates/profile.html:23
+msgid "Car License Plate"
+msgstr "Plaque d'immatriculation de voiture"
+
+#: auth/__init__.py:186
+msgid "Submit"
+msgstr "Soumettre"
+
+#: auth/__init__.py:213
+msgid "Invalid username or password"
+msgstr ""
+
+#: auth/__init__.py:256
+msgid "Username is not available!"
+msgstr "Nom d'utilisateur ou mot de passe invalide"
+
+#: auth/templates/driverInformation.html:7
+msgid "Register Vehicle"
+msgstr "Enregistrer le véhicule"
+
+#: auth/templates/driverInformation.html:15
+msgid "Register Your Vehicle"
+msgstr "Enregistrez votre véhicule"
+
+#: auth/templates/login.html:15 auth/templates/signup.html:15
+#: profiles/templates/profile.html:11
+msgid "Home"
+msgstr "Maison"
+
+#: auth/templates/login.html:28
+msgid "Don't have an account?"
+msgstr "Vous n'avez pas de compte ?"
+
+#: auth/templates/signup.html:7 auth/templates/signup.html:15
+msgid "Signup"
+msgstr "S'inscrire"
+
+#: auth/templates/signup.html:28
+msgid "Already have an account?"
+msgstr "Vous avez déjà un compte?"
+
+#: profiles/templates/editProfile.html:14
+msgid "Edit Your Vehicle"
+msgstr "Modifiez votre véhicule"
+
+#: profiles/templates/profile.html:12
+msgid "profile"
+msgstr "profil"
+
+#: profiles/templates/profile.html:25
+msgid "Edit vehicle information"
+msgstr "Modifier les informations du véhicule"
+
+#: templates/chat.html:9
+msgid "Ride chat"
+msgstr "Chat en voiture"
+
+#: templates/chat.html:13
+msgid "Back to ride details"
+msgstr "Retour aux détails du trajet"
+
+#: templates/chat.html:22
+msgid "Send"
+msgstr "Envoyer"
+
+#: templates/driver.html:7
+msgid "Select a ride"
+msgstr "Sélectionnez un trajet"
+
+#: templates/driver.html:12
+msgid "Available rides"
+msgstr "Trajets disponibles"
+
+#: templates/driver.html:16
+msgid "To"
+msgstr "À"
+
+#: templates/driver.html:18
+msgid "Select ride"
+msgstr "Sélectionnez un trajet"
+
+#: templates/error.html:7
+msgid "Error"
+msgstr "Erreur"
+
+#: templates/error.html:15
+msgid "Go back home"
+msgstr "Rentrer à la maison"
+
+#: templates/invoice.html:7
+msgid "Invoice"
+msgstr ""
+
+#: templates/invoice.html:11
+msgid "Ride invoice"
+msgstr "Facture de trajet"
+
+#: templates/invoice.html:12 templates/ride.html:13
+msgid "Driver"
+msgstr "Conducteur(trice)"
+
+#: templates/invoice.html:13 templates/ride.html:14
+msgid "Rider"
+msgstr "Cavalier"
+
+#: templates/invoice.html:14
+msgid "Ride cost"
+msgstr "Coût du trajet"
+
+#: templates/ride.html:8
+msgid "Your ride"
+msgstr "Votre trajet"
+
+#: templates/ride.html:12
+msgid "Ride details"
+msgstr "Détails du trajet"
+
+#: templates/ride.html:15
+msgid "Destination"
+msgstr "Destination"
+
+#: templates/ride.html:16
+msgid "Chat"
+msgstr "Tchat"
+
+#: templates/ride.html:17
+msgid "Arrived"
+msgstr "Arrivé"
+
+#: templates/rider.html:7 templates/rider.html:14
+msgid "Request a ride"
+msgstr "Demander un trajet"
+
+#: templates/waiting.html:8
+msgid "Waiting for a driver"
+msgstr "En attente d'un chauffeur"
+
+#: templates/waiting.html:12
+msgid "WAITING FOR A DRIVER TO AGREE TO OFFER YOU THE RIDE"
+msgstr "EN ATTENTE QU'UN CHAUFFEUR ACCEPTE DE VOUS PROPOSER LE TRAJET"

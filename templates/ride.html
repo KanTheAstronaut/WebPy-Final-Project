@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/socket.js') }}"></script>
+    <title>{{gettext("Your ride")}}</title>
+</head>
+
+<body>
+    <h3>{{gettext("Ride details")}}:</h3>
+    <p>{{gettext("Driver")}}: {{driver.username}}</p>
+    <p>{{gettext("Rider")}}: {{rider.username}}</p>
+    <p>{{gettext("Destination")}}: {{ride.textAddress}}</p>
+    <a href="/ride/{{ride._id|string}}/chat">{{gettext("Chat")}}</a> {% if current_user.driver %}
+    <button onclick="socket.emit('triggerarrived', {id: '{{ride._id|string}}'});">{{gettext("Arrived")}}</button> {% endif %} {{ map | safe }}
+    <script>
+        createSocket("/ride", "{{ ride._id|string }}")
+        window.socket.on('refresh', function() {
+            location.reload();
+        });
+        window.socket.on('arrived', function() {
+            print("arrived")
+            location.href = '/ride/{{ride._id|string}}/invoice'
+        });
+    </script>
+</body>
+
+</html>

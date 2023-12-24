@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{gettext("Login")}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <main>
+        <form method="post">
+            <fieldset>
+                <h2>{{gettext('Login')}} - <a href="/">{{gettext('Home')}}</a></h2>
+                {{ form.hidden_tag() }} {% if request.args.get('next') %}
+                <input type="hidden" name="next" value="{{request.args.get('next')}}" /> {% endif %} {{ form.username.label() }} {{ form.username() }} {{ form.password.label() }} {{ form.password() }} {% with messages = get_flashed_messages(with_categories=true)
+                %} {% if messages or form.errors %}
+                <ul>
+                    {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %} {% for field, message in form.errors %}
+                    <li class="error">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% endwith %} {{ form.submit() }}
+                <div class="text-center">
+                    <a href="{{ url_for('auth.signup', next=request.args.get('next')) }}">{{gettext("Don't have an account?")}}</a>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user.username}}</title>
+</head>
+
+<body>
+    <a href="/">{{gettext('Home')}}</a>
+    <h3>{{user.username}}'s {{gettext("profile")}}</h3>
+    {% for recipe in recipes %}
+    <div>
+        <h3>{{gettext('Username')}}: {{current_user.username}}</h3>
+        <p>{{gettext('Email')}}: {{current_user.email}}</p>
+        <img src="data:image/png;base64,{{current_user.image}}" height="150"></img>
+        {% if current_user.driver %}
+        <p>{{gettext('Car Make')}}: {{current_user.carMake}}</p>
+        <p>{{gettext('Car Model')}}: {{current_user.carModel}}</p>
+        <p>{{gettext('Car Year')}}: {{current_user.carYear}}</p>
+        <p>{{gettext('Car Color')}}: {{current_user.carColor}}</p>
+        <p>{{gettext('Car License Plate')}}: {{current_user.carLicensePlate}}</p>
+
+        <a href="{{ url_for('profiles.editCarInfo') }}">{{gettext("Edit vehicle information")}}</a> {% endif %}
+    </div>
+    <hr> {% endfor %}
+</body>
+
+</html>

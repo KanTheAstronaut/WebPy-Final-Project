@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/socket.js') }}"></script>
+    <title>{{gettext("Select a ride")}}!</title>
+</head>
+
+<body>
+    <div>
+        <h3>{{gettext("Available rides")}}</h3>
+        <div class="ride-list">
+            {% for ride in pendingRides %}
+            <div>
+                <p>{{gettext("To")}}: {{ride.textAddress}}</p>
+                <p>{{gettext("Time")}}: {{ride.time}}</p>
+                <button onclick="socket.emit('selrid', {id: '{{ current_user.carType }}-DECIDING', carType: '{{current_user.carType}}', userId: '{{ride.userId}}'});">{{gettext("Select ride")}}</button>
+                <hr>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script>
+        createSocket("/rideExchange", "{{ current_user.carType }}-DECIDING")
+        window.socket.on('giveride', function() {
+            location.reload();
+        });
+        window.socket.on('redirect', function(data) {
+            location.href = data['url'];
+        });
+    </script>
+</body>
+
+</html>
